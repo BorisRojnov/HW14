@@ -9,6 +9,12 @@ public class Main {
 
     public static double avg(int num) {
         //todo Дописать логику работы метода сюда. Метод main не трогаем!!!
-        return 0; //todo заменить 0 на корректный результат.
+        double result = 0;
+       String inToString = String.valueOf(num);
+        for(int i = 0; i < inToString.length(); i++){
+           Double inToDouble = Double.parseDouble(String.valueOf((inToString.charAt(i))));
+           result += inToDouble;
+        }
+        return (result / inToString.length()); //todo заменить 0 на корректный результат.
     }
 }
